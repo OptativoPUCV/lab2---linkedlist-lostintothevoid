@@ -217,3 +217,13 @@ list.c:48:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 3dc9ad8
+Fri 24 Mar 2023 12:17:10 PM UTC: 
+ list.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:44:3: error: expected ‘;’ before ‘}’ token
+   44 |   }
+      |   ^
+Compilation failed
+8a69ada
