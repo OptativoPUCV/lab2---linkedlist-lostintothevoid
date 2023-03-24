@@ -39,10 +39,10 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  if (list->head->data=NULL){
+  if (list->head->data==NULL){
     return list->head=NULL;
   }
-  if(list->head!=NULL){
+  if(list->head->data!=NULL){
     return list->head->data;
   } 
 }
