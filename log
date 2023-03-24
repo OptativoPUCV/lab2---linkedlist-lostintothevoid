@@ -30,3 +30,38 @@ Fri 24 Mar 2023 11:35:24 AM UTC:
  tests:  1|5
 total_score: 10/70
 cd3138f
+Fri 24 Mar 2023 12:01:53 PM UTC: 
+ list.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c:31:8: error: conflicting types for ‘createList’; have ‘List *(void *)’ {aka ‘struct List *(void *)’}
+   31 | List * createList(void* L) {
+      |        ^~~~~~~~~~
+In file included from list.c:4,
+                 from test.c:5:
+list.h:6:8: note: previous declaration of ‘createList’ with type ‘List *(void)’ {aka ‘struct List *(void)’}
+    6 | List * createList(void);
+      |        ^~~~~~~~~~
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:32:9: error: ‘L’ redeclared as different kind of symbol
+   32 |   List* L = (List*) malloc(sizeof(List));
+      |         ^
+list.c:31:25: note: previous definition of ‘L’ with type ‘void *’
+   31 | List * createList(void* L) {
+      |                   ~~~~~~^
+list.c: In function ‘firstList’:
+list.c:42:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   42 |   if (list->head=NULL){
+      |       ^~~~
+test.c: In function ‘test_create’:
+test.c:84:15: error: too few arguments to function ‘createList’
+   84 |     List* L = createList();
+      |               ^~~~~~~~~~
+In file included from test.c:5:
+list.c:31:8: note: declared here
+   31 | List * createList(void* L) {
+      |        ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+486c329

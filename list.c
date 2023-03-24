@@ -28,19 +28,21 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList() {
+List * createList(void* L) {
   List* L = (List*) malloc(sizeof(List));
   if(L==NULL) exit(EXIT_FAILURE);
   L->head=NULL;
   L->tail=NULL;
   L->current=NULL;
 
-     return L;
-     return NULL;
+  return L;
 }
 
 void * firstList(List * list) {
+  if (list->head=NULL){
     return NULL;
+  }
+  return list->head->data;
 }
 
 void * nextList(List * list) {
