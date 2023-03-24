@@ -2,3 +2,25 @@ Fri 24 Mar 2023 11:34:01 AM UTC:
  tests:  0|6
 total_score: 0/70
 36f7d6b
+Fri 24 Mar 2023 11:35:11 AM UTC: 
+ list.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c:31:8: error: conflicting types for ‘createList’; have ‘List *(List *)’ {aka ‘struct List *(struct List *)’}
+   31 | List * createList(List* list) {
+      |        ^~~~~~~~~~
+In file included from list.c:4,
+                 from test.c:5:
+list.h:6:8: note: previous declaration of ‘createList’ with type ‘List *(void)’ {aka ‘struct List *(void)’}
+    6 | List * createList(void);
+      |        ^~~~~~~~~~
+test.c: In function ‘test_create’:
+test.c:84:15: error: too few arguments to function ‘createList’
+   84 |     List* L = createList();
+      |               ^~~~~~~~~~
+In file included from test.c:5:
+list.c:31:8: note: declared here
+   31 | List * createList(List* list) {
+      |        ^~~~~~~~~~
+Compilation failed
+005c027
