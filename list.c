@@ -84,8 +84,10 @@ void pushFront(List * list, void * data) {
     list->head=Newnodo;
     list->current=Newnodo;
   }
-  Newnodo->next=list->head;
-  list->head=Newnodo;
+  else{
+    Newnodo->next=list->head;
+    list->head=Newnodo;
+  }
   
 }
 
