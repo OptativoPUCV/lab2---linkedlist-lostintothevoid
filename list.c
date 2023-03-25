@@ -80,7 +80,7 @@ void * prevList(List * list){
 
 void pushFront(List * list, void * data) {
   Node * Newnodo = createNode(data);
-  if(!list){
+  if(!list->head){
     list->head=Newnodo;
     list->current=Newnodo;
     list->tail=Newnodo;
