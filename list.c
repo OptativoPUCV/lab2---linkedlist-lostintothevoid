@@ -70,8 +70,11 @@ void * lastList(List * list) {
   return list->tail->data;
 }
 
-void * prevList(List * list) {
-  list->current=list->current->prev;  
+void * prevList(List * list){
+  if(!list->current->prev)
+    return NULL;
+  else
+    list->current=list->current->prev;  
   return list->current->data;
 }
 
