@@ -280,3 +280,9 @@ Sat 25 Mar 2023 09:12:27 PM UTC:
  tests:  5|4
 total_score: 25/70
 a0224a0
+Sat 25 Mar 2023 09:15:48 PM UTC: 
+ list.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 25/70
+81de5ef
