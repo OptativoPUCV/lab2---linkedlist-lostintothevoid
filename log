@@ -260,3 +260,17 @@ Fri 24 Mar 2023 12:26:52 PM UTC:
  tests:  5|4
 total_score: 25/70
 0960a44
+Sat 25 Mar 2023 09:11:11 PM UTC: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:64:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   64 |   if(!list->tail)
+      |   ^~
+list.c:66:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |     return list->tail->data;
+      |     ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+71fad5d
