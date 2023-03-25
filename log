@@ -412,3 +412,19 @@ Sat 25 Mar 2023 11:00:18 PM UTC:
  tests:  9|3
 total_score: 35/70
 6052f15
+Sat 25 Mar 2023 11:01:17 PM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:86:15: error: ‘Node’ has no member named ‘Newnodo’
+   86 |     list->tail->Newnodo
+      |               ^~
+list.c:86:24: error: expected ‘;’ before ‘}’ token
+   86 |     list->tail->Newnodo
+      |                        ^
+      |                        ;
+   87 |   }
+      |   ~                     
+Compilation failed
+d5b6e61
