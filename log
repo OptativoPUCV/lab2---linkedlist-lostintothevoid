@@ -286,3 +286,20 @@ Sat 25 Mar 2023 09:15:48 PM UTC:
  tests:  6|4
 total_score: 25/70
 81de5ef
+Sat 25 Mar 2023 09:29:24 PM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:74:36: error: expected ‘;’ before ‘return’
+   74 |   list->current=list->current->prev
+      |                                    ^
+      |                                    ;
+   75 |   return list->current->dato;
+      |   ~~~~~~                            
+list.c:76:1: error: control reaches end of non-void function [-Werror=return-type]
+   76 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+fad2742
