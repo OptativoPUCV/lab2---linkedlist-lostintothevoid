@@ -82,7 +82,7 @@ void pushFront(List * list, void * data) {
   Node * Newnodo = createNode(data);
   if(!list->head){
     list->head=Newnodo;
-    list->curren=Newnodo;
+    list->current=Newnodo;
   }
   Newnodo->next=list->head;
   list->head=Newnodo;
