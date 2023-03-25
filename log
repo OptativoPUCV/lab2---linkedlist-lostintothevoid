@@ -333,3 +333,14 @@ Sat 25 Mar 2023 09:33:28 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 6268f93
+Sat 25 Mar 2023 09:34:04 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:75:18: error: ‘List’ {aka ‘struct List’} has no member named ‘curretn’; did you mean ‘current’?
+   75 |     return list->curretn->data;
+      |                  ^~~~~~~
+      |                  current
+Compilation failed
+10d747d
