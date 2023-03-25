@@ -383,3 +383,14 @@ Sat 25 Mar 2023 10:49:33 PM UTC:
  tests:  9|3
 total_score: 35/70
 f7309c8
+Sat 25 Mar 2023 10:58:51 PM UTC: 
+ list.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:85:11: error: ‘List’ {aka ‘struct List’} has no member named ‘curren’; did you mean ‘current’?
+   85 |     list->curren=Newnodo;
+      |           ^~~~~~
+      |           current
+Compilation failed
+1103b0b
