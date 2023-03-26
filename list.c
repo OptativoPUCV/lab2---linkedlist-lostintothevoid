@@ -136,10 +136,7 @@ void * popCurrent(List * list) {
     while(nodaux->next!=list->current)
       nodaux = nodaux->next;
     nodaux->next=list->current->next;
-    aux = createNode(list->current->data);
-    free(list->current);
     list->current=nodaux;
-    return list;
   } 
   if(list->current==list->tail)
     list->tail=list->current->prev;
