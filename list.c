@@ -140,6 +140,7 @@ void * popCurrent(List * list) {
   if(list->current==list->tail)
     list->tail=aux->prev;
   list->current=aux->next;
+  aux->prev=list->head;
   free(aux);
   return auxdata;
 }
