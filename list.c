@@ -138,7 +138,7 @@ void * popCurrent(List * list) {
     nodaux->next=list->current->next;
   } 
   if(list->current==list->tail)
-    list->tail=list->current->prev;
+    list->tail=aux->prev;
   list->current=aux->next;
   free(aux);
   return auxdata;
